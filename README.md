@@ -2,7 +2,7 @@
 
 WorldTimePlaceholders is a small Minecraft Paper plugin that exposes safe PlaceholderAPI placeholders for Minecraft world time in MOTD and server-list ping contexts.
 
-Repository: https://github.com/v3sker/WorldTime
+Repository: https://github.com/v3sker/WorldTimePlaceholders
 
 It exists for setups like AdvancedServerList where placeholders are resolved during server-list pings and there is no real Bukkit `Player`. This plugin never casts to `Player`, and it does not read live world state from the PlaceholderAPI request path. World values are cached once per second on the main server thread.
 
