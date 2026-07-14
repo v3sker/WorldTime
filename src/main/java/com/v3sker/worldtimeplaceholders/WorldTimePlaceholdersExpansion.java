@@ -1,4 +1,4 @@
-package com.v3sker.worldtime;
+package com.v3sker.worldtimeplaceholders;
 
 import java.util.Locale;
 
@@ -6,19 +6,19 @@ import org.bukkit.OfflinePlayer;
 
 import me.clip.placeholderapi.expansion.PlaceholderExpansion;
 
-public final class MotdWorldTimeExpansion extends PlaceholderExpansion {
+public final class WorldTimePlaceholdersExpansion extends PlaceholderExpansion {
 
     private static final String PREFIX_12 = "12_";
     private static final String PREFIX_24 = "24_";
     private static final String PREFIX_TICKS = "ticks_";
     private static final String PREFIX_DAY = "day_";
 
-    public MotdWorldTimeExpansion() {
+    public WorldTimePlaceholdersExpansion() {
     }
 
     @Override
     public String getIdentifier() {
-        return "worldtimeplaceholders";
+        return "WorldTimePlaceholders";
     }
 
     @Override
@@ -28,7 +28,7 @@ public final class MotdWorldTimeExpansion extends PlaceholderExpansion {
 
     @Override
     public String getVersion() {
-        MotdWorldTimePlugin current = MotdWorldTimePlugin.getInstance();
+        WorldTimePlaceholdersPlugin current = WorldTimePlaceholdersPlugin.getInstance();
         return current != null ? current.getDescription().getVersion() : "unknown";
     }
 
@@ -64,8 +64,8 @@ public final class MotdWorldTimeExpansion extends PlaceholderExpansion {
         return "";
     }
 
-    private MotdWorldTimePlugin.WorldTimeSnapshot resolveSnapshot(String worldName) {
-        MotdWorldTimePlugin current = MotdWorldTimePlugin.getInstance();
+    private WorldTimePlaceholdersPlugin.WorldTimeSnapshot resolveSnapshot(String worldName) {
+        WorldTimePlaceholdersPlugin current = WorldTimePlaceholdersPlugin.getInstance();
         if (current == null) {
             return null;
         }
@@ -83,7 +83,7 @@ public final class MotdWorldTimeExpansion extends PlaceholderExpansion {
         return trimmed.toLowerCase(Locale.ROOT);
     }
 
-    private static String format12Hour(MotdWorldTimePlugin.WorldTimeSnapshot snapshot) {
+    private static String format12Hour(WorldTimePlaceholdersPlugin.WorldTimeSnapshot snapshot) {
         if (snapshot == null) {
             return "";
         }
@@ -98,7 +98,7 @@ public final class MotdWorldTimeExpansion extends PlaceholderExpansion {
         return hour12 + ":" + pad2(minute) + " " + period;
     }
 
-    private static String format24Hour(MotdWorldTimePlugin.WorldTimeSnapshot snapshot) {
+    private static String format24Hour(WorldTimePlaceholdersPlugin.WorldTimeSnapshot snapshot) {
         if (snapshot == null) {
             return "";
         }
@@ -108,11 +108,11 @@ public final class MotdWorldTimeExpansion extends PlaceholderExpansion {
         return pad2(hour) + ":" + pad2(minute);
     }
 
-    private static String formatTicks(MotdWorldTimePlugin.WorldTimeSnapshot snapshot) {
+    private static String formatTicks(WorldTimePlaceholdersPlugin.WorldTimeSnapshot snapshot) {
         return snapshot == null ? "" : Long.toString(snapshot.ticks());
     }
 
-    private static String formatDay(MotdWorldTimePlugin.WorldTimeSnapshot snapshot) {
+    private static String formatDay(WorldTimePlaceholdersPlugin.WorldTimeSnapshot snapshot) {
         return snapshot == null ? "" : Long.toString(snapshot.day());
     }
 

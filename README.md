@@ -1,6 +1,6 @@
-# WorldTime
+# WorldTimePlaceholders
 
-MotdWorldTime is a small Minecraft Paper plugin that exposes safe PlaceholderAPI placeholders for Minecraft world time in MOTD and server-list ping contexts.
+WorldTimePlaceholders is a small Minecraft Paper plugin that exposes safe PlaceholderAPI placeholders for Minecraft world time in MOTD and server-list ping contexts.
 
 Repository: https://github.com/v3sker/WorldTime
 
@@ -15,7 +15,7 @@ mvn clean package
 ## Install
 
 1. Build the plugin.
-2. Copy the generated jar from `target/motd-worldtime-1.0.0.jar` into your server's `plugins/` folder.
+2. Copy the generated jar from `target/WorldTimePlaceholders-1.0.0.jar` into your server's `plugins/` folder.
 3. Install PlaceholderAPI on the server.
 4. Start or restart the server.
 
@@ -24,27 +24,27 @@ mvn clean package
 Use these placeholders in your MOTD or ping formatting:
 
 ```text
-%worldtimeplaceholders_12_world%
-%worldtimeplaceholders_24_world%
-%worldtimeplaceholders_ticks_world%
-%worldtimeplaceholders_day_world%
+%WorldTimePlaceholders_12_world%
+%WorldTimePlaceholders_24_world%
+%WorldTimePlaceholders_ticks_world%
+%WorldTimePlaceholders_day_world%
 ```
 
 World names with underscores are supported:
 
 ```text
-%worldtimeplaceholders_12_world_nether%
-%worldtimeplaceholders_24_world_the_end%
-%worldtimeplaceholders_ticks_world_nether%
-%worldtimeplaceholders_day_world_the_end%
+%WorldTimePlaceholders_12_world_nether%
+%WorldTimePlaceholders_24_world_the_end%
+%WorldTimePlaceholders_ticks_world_nether%
+%WorldTimePlaceholders_day_world_the_end%
 ```
 
 ## Placeholders
 
-- `%worldtimeplaceholders_12_<world>%` - 12-hour time, such as `6:00 AM`
-- `%worldtimeplaceholders_24_<world>%` - 24-hour time, such as `13:23`
-- `%worldtimeplaceholders_ticks_<world>%` - Raw `World#getTime()` ticks
-- `%worldtimeplaceholders_day_<world>%` - Full day count from `World#getFullTime() / 24000`
+- `%WorldTimePlaceholders_12_<world>%` - 12-hour time, such as `6:00 AM`
+- `%WorldTimePlaceholders_24_<world>%` - 24-hour time, such as `13:23`
+- `%WorldTimePlaceholders_ticks_<world>%` - Raw `World#getTime()` ticks
+- `%WorldTimePlaceholders_day_<world>%` - Full day count from `World#getFullTime() / 24000`
 
 ## Notes
 
@@ -55,4 +55,4 @@ World names with underscores are supported:
   world-time placeholders. Some versions cast the PlaceholderAPI
   `OfflinePlayer` to a live Bukkit `Player`, which fails during server-list
   pings because there is no real player for that request. Use this plugin's
-  `%worldtimeplaceholders_*%` placeholders instead.
+  `%WorldTimePlaceholders_*%` placeholders instead.

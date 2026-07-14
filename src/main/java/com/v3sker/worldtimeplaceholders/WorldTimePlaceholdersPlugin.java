@@ -1,4 +1,4 @@
-package com.v3sker.worldtime;
+package com.v3sker.worldtimeplaceholders;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -12,14 +12,14 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitTask;
 
-public final class MotdWorldTimePlugin extends JavaPlugin {
+public final class WorldTimePlaceholdersPlugin extends JavaPlugin {
 
-    private static volatile MotdWorldTimePlugin instance;
+    private static volatile WorldTimePlaceholdersPlugin instance;
     private volatile Map<String, WorldTimeSnapshot> worldTimeCache = Map.of();
     private BukkitTask cacheTask;
-    private MotdWorldTimeExpansion expansion;
+    private WorldTimePlaceholdersExpansion expansion;
 
-    public static MotdWorldTimePlugin getInstance() {
+    public static WorldTimePlaceholdersPlugin getInstance() {
         return instance;
     }
 
@@ -28,9 +28,9 @@ public final class MotdWorldTimePlugin extends JavaPlugin {
         instance = this;
         updateWorldTimeCache();
 
-        expansion = new MotdWorldTimeExpansion();
+        expansion = new WorldTimePlaceholdersExpansion();
         if (!expansion.register()) {
-            getLogger().warning("Failed to register PlaceholderAPI expansion worldtimeplaceholders.");
+            getLogger().warning("Failed to register PlaceholderAPI expansion WorldTimePlaceholders.");
         }
 
         cacheTask = new BukkitRunnable() {
@@ -40,7 +40,7 @@ public final class MotdWorldTimePlugin extends JavaPlugin {
             }
         }.runTaskTimer(this, 20L, 20L);
 
-        getLogger().info("MotdWorldTime enabled. PlaceholderAPI expansion worldtimeplaceholders is active and cached values refresh every 20 ticks.");
+        getLogger().info("WorldTimePlaceholders enabled. PlaceholderAPI expansion WorldTimePlaceholders is active and cached values refresh every 20 ticks.");
         getLogger().info("Cached worlds: " + String.join(", ", worldTimeCache.keySet()));
     }
 
@@ -56,7 +56,7 @@ public final class MotdWorldTimePlugin extends JavaPlugin {
         }
         worldTimeCache = Map.of();
         instance = null;
-        getLogger().info("MotdWorldTime disabled.");
+        getLogger().info("WorldTimePlaceholders disabled.");
     }
 
     public WorldTimeSnapshot getCachedWorldTime(String worldName) {

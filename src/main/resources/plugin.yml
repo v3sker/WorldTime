@@ -1,6 +1,6 @@
-name: MotdWorldTime
+name: WorldTimePlaceholders
 version: 1.0.0
-main: com.v3sker.worldtime.MotdWorldTimePlugin
+main: com.v3sker.worldtimeplaceholders.WorldTimePlaceholdersPlugin
 api-version: "1.21"
 authors:
   - v3sker

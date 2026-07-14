@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.v3sker</groupId>
-    <artifactId>motd-worldtime</artifactId>
+    <artifactId>WorldTimePlaceholders</artifactId>
     <version>1.0.0</version>
-    <name>MotdWorldTime</name>
+    <name>WorldTimePlaceholders</name>
     <description>PlaceholderAPI world time placeholders for MOTD and server-list contexts.</description>
     <url>https://github.com/v3sker/WorldTime</url>
 
