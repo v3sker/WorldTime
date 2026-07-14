@@ -30,7 +30,7 @@ public final class MotdWorldTimePlugin extends JavaPlugin {
 
         expansion = new MotdWorldTimeExpansion();
         if (!expansion.register()) {
-            getLogger().warning("Failed to register PlaceholderAPI expansion motdworldtime.");
+            getLogger().warning("Failed to register PlaceholderAPI expansion worldtimeplaceholders.");
         }
 
         cacheTask = new BukkitRunnable() {
@@ -40,7 +40,7 @@ public final class MotdWorldTimePlugin extends JavaPlugin {
             }
         }.runTaskTimer(this, 20L, 20L);
 
-        getLogger().info("MotdWorldTime enabled. PlaceholderAPI expansion motdworldtime is active and cached values refresh every 20 ticks.");
+        getLogger().info("MotdWorldTime enabled. PlaceholderAPI expansion worldtimeplaceholders is active and cached values refresh every 20 ticks.");
         getLogger().info("Cached worlds: " + String.join(", ", worldTimeCache.keySet()));
     }
 

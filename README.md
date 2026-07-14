@@ -24,27 +24,27 @@ mvn clean package
 Use these placeholders in your MOTD or ping formatting:
 
 ```text
-%motdworldtime_12_world%
-%motdworldtime_24_world%
-%motdworldtime_ticks_world%
-%motdworldtime_day_world%
+%worldtimeplaceholders_12_world%
+%worldtimeplaceholders_24_world%
+%worldtimeplaceholders_ticks_world%
+%worldtimeplaceholders_day_world%
 ```
 
 World names with underscores are supported:
 
 ```text
-%motdworldtime_12_world_nether%
-%motdworldtime_24_world_the_end%
-%motdworldtime_ticks_world_nether%
-%motdworldtime_day_world_the_end%
+%worldtimeplaceholders_12_world_nether%
+%worldtimeplaceholders_24_world_the_end%
+%worldtimeplaceholders_ticks_world_nether%
+%worldtimeplaceholders_day_world_the_end%
 ```
 
 ## Placeholders
 
-- `%motdworldtime_12_<world>%` - 12-hour time, such as `6:00 AM`
-- `%motdworldtime_24_<world>%` - 24-hour time, such as `13:23`
-- `%motdworldtime_ticks_<world>%` - Raw `World#getTime()` ticks
-- `%motdworldtime_day_<world>%` - Full day count from `World#getFullTime() / 24000`
+- `%worldtimeplaceholders_12_<world>%` - 12-hour time, such as `6:00 AM`
+- `%worldtimeplaceholders_24_<world>%` - 24-hour time, such as `13:23`
+- `%worldtimeplaceholders_ticks_<world>%` - Raw `World#getTime()` ticks
+- `%worldtimeplaceholders_day_<world>%` - Full day count from `World#getFullTime() / 24000`
 
 ## Notes
 
@@ -55,4 +55,4 @@ World names with underscores are supported:
   world-time placeholders. Some versions cast the PlaceholderAPI
   `OfflinePlayer` to a live Bukkit `Player`, which fails during server-list
   pings because there is no real player for that request. Use this plugin's
-  `%motdworldtime_*%` placeholders instead.
+  `%worldtimeplaceholders_*%` placeholders instead.

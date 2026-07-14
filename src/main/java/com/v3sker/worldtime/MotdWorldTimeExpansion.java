@@ -18,7 +18,7 @@ public final class MotdWorldTimeExpansion extends PlaceholderExpansion {
 
     @Override
     public String getIdentifier() {
-        return "motdworldtime";
+        return "worldtimeplaceholders";
     }
 
     @Override
