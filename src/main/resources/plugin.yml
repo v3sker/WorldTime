@@ -1,0 +1,10 @@
+name: MotdWorldTime
+version: 1.0.0
+main: com.v3sker.worldtime.MotdWorldTimePlugin
+api-version: "1.21"
+authors:
+  - v3sker
+website: https://github.com/v3sker/WorldTime
+depend:
+  - PlaceholderAPI
+description: PlaceholderAPI world time placeholders for MOTD and server-list contexts.
